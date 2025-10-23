@@ -12,7 +12,7 @@ It’s a simple landing page for **Hami MiniMarket**, a community-based store th
 ## 🚀 How to Run
 1. Clone this repository  
 2. Open `index.html` in your browser  
-3. Or view the live version: [Live Link](https://hami-minimarket.github.pages.io)
+3. Or view the live version: [Live Link](https://sirrryasir.github.io/hami-minimarket)
 
 ## 🧠 Learning Summary
 This project helped me practice responsive layouts, semantic HTML, and adding simple JavaScript functionality.
