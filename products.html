@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hami MiniMarket</title>
+    <title>Products - Hami MiniMarket</title>
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <link
@@ -28,6 +28,7 @@
           <a href="index.html#about">About</a>
           <a href="index.html#contact">Contact</a>
         </div>
+
         <button id="menuBtn" class="hamburger">
           <i class="fa-solid fa-bars"></i>
         </button>
@@ -41,24 +42,38 @@
           <a href="index.html#about">About</a>
           <a href="index.html#contact">Contact</a>
         </div>
+        <div class="cart-icon">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cartCount">0</span>
+        </div>
       </nav>
 
       <div id="menuOverlay" class="menu-overlay"></div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home">
-      <div class="hero">
-        <h1>Fresh. Local. Trusted.</h1>
-        <p>Your community shop for fresh fruits and vegetables.</p>
-        <button id="heroBtn" class="btn">Shop Now</button>
+    <!-- Filters -->
+    <section class="products-page">
+      <h2>All Products</h2>
+      <div class="filters">
+        <input type="text" id="searchInput" placeholder="Search products..." />
+        <select id="categoryFilter">
+          <option value="all">All</option>
+          <option value="fruits">Fruits</option>
+          <option value="vegetables">Vegetables</option>
+        </select>
+        <input
+          type="range"
+          id="priceRange"
+          min="0"
+          max="10"
+          value="10"
+          step="0.5"
+        />
+        <span id="priceValue">$10</span>
       </div>
-    </section>
 
-    <!-- Product Section -->
-    <section id="products" class="products">
-      <h2>Our Products</h2>
-      <div class="product-grid">
+      <!-- Product List -->
+      <div class="product-grid" id="productList">
         <div class="card" data-category="fruits">
           <img
             src="https://thumbs.dreamstime.com/b/red-apple-fruit-half-green-leaf-isolated-white-ripe-background-apples-clipping-path-98166062.jpg"
@@ -178,59 +193,107 @@
           <p>$2.65 / kg</p>
           <button class="add-cart-btn">Add to Cart</button>
         </div>
-      </div>
-      <div>
-        <button id="productBtn" class="btn">View All Products</button>
+
+        <div class="card" data-category="vegetables">
+          <img
+            src="https://cdn.prod.website-files.com/6813327ff6a5c6e7b27cf7c8/68a352302e449ba550f5d754_6852bd0ad3f48b321064b105_Pepper_Red_Bell.jpeg"
+            alt="Red Bell Peppers"
+          />
+          <h3>Red Bell Peppers</h3>
+          <p>$3.10 / kg</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="fruits">
+          <img
+            src="https://panettamercato.com.au/wp-content/uploads/2021/07/Lemons-1kg-Net-Panetta-Mercato.jpeg"
+            alt="Lemons"
+          />
+          <h3>Lemons</h3>
+          <p>$1.79 / kg</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="vegetables">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Chou-fleur_02.jpg"
+            alt="Cauliflower"
+          />
+          <h3>Cauliflowers</h3>
+          <p>$3.25 / kg</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="vegetables">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN_uhM0eWP8vpC5ZYQWJtX7OWWji_2u0-g2Q&s"
+            alt="Garlic"
+          />
+          <h3>Garlics</h3>
+          <p>$0.75 / piece</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="fruits">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuDiroxCRX6tJukmr-IISJ_DQkq7qh10oJ7qfhG3qbdBQzRRm9LUorI71qjeWt_Tf3hKc&usqp=CAU"
+            alt="Kiwi Fruit"
+          />
+          <h3>Kiwi Fruits</h3>
+          <p>$3.29 / kg</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="fruits">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRcsYc-6vshS5qQX_XMNwMSm-7TAErvuDrCfMRhJ7W5Hcuv7rCkeKJwTXLjYRT5Xh23ps&usqp=CAU"
+            alt="Mangoes"
+          />
+          <h3>Mangoes</h3>
+          <p>$1.80 / piece</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="vegetables">
+          <img
+            src="https://malabardirect.com/cdn/shop/products/pinkravaya.jpg?v=1601574508"
+            alt="Eggplants (Aubergine)"
+          />
+          <h3>Eggplants Aubergine</h3>
+          <p>$2.10 / kg</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="card" data-category="fruits">
+          <img
+            src="https://img.freepik.com/free-photo/green-striped-ripe-watermelon-with-slice-cross-section-isolated-white-background-with-copy-space-text-images-special-kind-berry-sweet-pink-flesh-with-black-seeds-side-view_639032-1254.jpg"
+            alt="Watermelon"
+          />
+          <h3>Watermelons</h3>
+          <p>$0.99 / kg</p>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-      <div class="content">
-        <h2>About Hami MiniMarket</h2>
-        <p>
-          Welcome to <strong>Hami MiniMarket</strong> — your trusted
-          neighborhood store for fresh, locally grown fruits and vegetables. We
-          were founded with one simple mission: to make healthy, organic, and
-          affordable produce accessible to everyone in our community. Every item
-          on our shelves comes directly from nearby farmers who take pride in
-          cultivating natural, chemical-free crops.
-        </p>
-
-        <p>
-          At Hami MiniMarket, we believe that good food starts with good soil.
-          That’s why we partner with small-scale growers who share our values of
-          sustainability, freshness, and integrity. By supporting local farms,
-          we not only deliver better quality products but also help strengthen
-          the local economy and reduce environmental impact.
-        </p>
-
-        <p>
-          Whether you’re looking for crisp apples, leafy greens, or the sweetest
-          tomatoes, you’ll always find produce that’s been handpicked with care.
-          Our team is dedicated to serving you with honesty, quality, and a
-          smile — because your health and satisfaction are our top priorities.
-        </p>
+    <!-- Cart Sidebar -->
+    <div id="cartSidebar" class="cart-sidebar">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button id="closeCart"><i class="fa-solid fa-xmark"></i></button>
       </div>
-
-      <div class="img">
-        <img
-          src="https://centerforfamilymedicine.com/wp-content/uploads/2020/06/Center-for-family-medicine-The-Health-Benefits-of-Eating-10-Servings-Of-Fruits-_-Veggies-Per-Day.jpg"
-          alt="Fresh fruits and vegetables display"
-        />
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-footer">
+        <p><strong>Total:</strong> $<span id="cartTotal">0.00</span></p>
+        <button id="clearCart" class="btn clear-cart">Clear Cart</button>
       </div>
-    </section>
+    </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-      <h2>Contact Us</h2>
-      <form id="contactForm">
-        <input type="text" id="name" placeholder="Your Name" required />
-        <input type="email" id="email" placeholder="Your Email" required />
-        <textarea id="message" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-    </section>
+    <!-- Overlay -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Toast message -->
+    <div id="toast" class="toast"></div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -238,6 +301,6 @@
       <button id="backToTop" class="back-to-top">↑</button>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="products.js"></script>
   </body>
 </html>

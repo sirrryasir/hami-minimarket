@@ -15,20 +15,40 @@ heroBtn.addEventListener("click", () => {
   document.getElementById("products").scrollIntoView({ behavior: "smooth" });
 });
 
+const productBtn = document.getElementById("productBtn");
+productBtn.addEventListener("click", () => {
+  window.location.href = "products.html";
+});
+
 document.getElementById("contactForm").addEventListener("submit", (e) => {
   e.preventDefault();
   alert("Thank you for contacting us!");
   e.target.reset();
 });
 
-const menuBtn = document.getElementById("menu");
-const navLinks = document.getElementById("navLinks");
+const menuBtn = document.getElementById("menuBtn");
+const menuSidebar = document.getElementById("menuSidebar");
+const closeMenu = document.getElementById("closeMenu");
+const menuOverlay = document.getElementById("menuOverlay");
+
 menuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
+  menuSidebar.classList.add("show");
+  menuOverlay.classList.add("show");
 });
 
-document.querySelectorAll(".nav a").forEach((link) =>
+closeMenu.addEventListener("click", () => {
+  menuSidebar.classList.remove("show");
+  menuOverlay.classList.remove("show");
+});
+
+menuOverlay.addEventListener("click", () => {
+  menuSidebar.classList.remove("show");
+  menuOverlay.classList.remove("show");
+});
+
+document.querySelectorAll(".menu-sidebar a").forEach((link) =>
   link.addEventListener("click", () => {
-    navLinks.classList.remove("show");
+    menuSidebar.classList.remove("show");
+    menuOverlay.classList.remove("show");
   })
 );
