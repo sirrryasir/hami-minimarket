@@ -6,6 +6,7 @@ window.addEventListener("scroll", () => {
     backToTop.classList.remove("show");
   }
 });
+
 backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });

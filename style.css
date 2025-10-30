@@ -39,7 +39,7 @@ section h2 {
   background: var(--secondary-color);
   color: var(--text-dark);
   border: none;
-  padding: 10px 20px;
+  padding: 15px 25px;
   border-radius: 25px;
   cursor: pointer;
   transition: 0.3s;
@@ -49,7 +49,7 @@ section h2 {
   background: var(--secondary-hover);
 }
 
-/* Header & Navigation */
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -192,7 +192,7 @@ nav {
 
 .hero h1,
 .hero p,
-.hero.btn {
+.hero .btn {
   position: relative;
   z-index: 2;
 }
@@ -351,46 +351,6 @@ textarea {
   font-weight: 600;
 }
 
-/* Footer & Back to Top */
-footer {
-  background: var(--primary-color);
-  color: var(--text-light);
-  text-align: center;
-  padding: 20px 25px;
-  position: relative;
-}
-
-footer p {
-  margin: 0;
-  font-size: 0.9rem;
-}
-
-.back-to-top {
-  position: fixed;
-  right: 20px;
-  bottom: 25px;
-  background: var(--secondary-color);
-  border: none;
-  padding: 10px 14px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  opacity: 0;
-  pointer-events: none;
-  box-shadow: var(--shadow);
-  z-index: 99;
-}
-
-.back-to-top:hover {
-  background: var(--secondary-hover);
-  transform: scale(1.1);
-}
-
-.back-to-top.show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
 /* Cart Sidebar */
 .cart-sidebar {
   position: fixed;
@@ -501,7 +461,7 @@ footer p {
   transform: translateY(0);
 }
 
-/* 5. Desktop Styles (Min-Width: 769px) */
+/* Desktop Styles */
 
 @media (min-width: 769px) {
   /* --- Header --- */
@@ -571,5 +531,148 @@ footer p {
 
   .about img {
     height: 450px;
+  }
+}
+
+/* Footer */
+.footer {
+  background: var(--primary-color);
+  color: var(--text-light);
+  padding: 40px 20px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-logo img {
+  width: 45px;
+  height: 45px;
+}
+
+.footer-col h4 {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  color: var(--secondary-color);
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: var(--secondary-color);
+}
+
+.footer-col p {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 5px;
+}
+
+.social-links a {
+  color: var(--text-light);
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--secondary-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 15px;
+  margin-top: 25px;
+  font-size: 0.9rem;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 25px;
+  background: var(--secondary-color);
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: var(--shadow);
+  z-index: 99;
+}
+
+.back-to-top:hover {
+  background: var(--secondary-hover);
+  transform: scale(1.1);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (min-width: 769px) {
+  .footer {
+    text-align: left;
+    padding: 50px 40px 20px;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+  }
+
+  .footer-col {
+    align-items: flex-start;
+  }
+
+  .footer-logo {
+    justify-content: flex-start;
+  }
+
+  .social-links {
+    justify-content: flex-start;
   }
 }
