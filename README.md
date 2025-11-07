@@ -6,6 +6,12 @@
 
 Hami MiniMarket is a modern, fully responsive e-commerce website built for a local grocery store. This project, developed as part of the HamiSkills Web Development Internship, demonstrates a complete front-end implementation of a mini-market, from a welcoming landing page to a functional order confirmation. It is designed to be user-friendly, intuitive, and visually appealing, providing a seamless shopping experience on any device.
 
+## Project Preview
+
+<p align="center">
+  <img src="assets/preview.png" alt="Hami MiniMarket Preview" width="100%">
+</p>
+
 ## 🚀 Live Demo
 
 Experience the live version of the application here:
@@ -17,6 +23,7 @@ Experience the live version of the application here:
 This project is packed with features that make for a complete and satisfying user experience.
 
 ### Product Discovery
+
 - **Dynamic Product Grid**: Products are displayed in a clean, organized grid that is easy to browse.
 - **Advanced Filtering**: Users can filter products by:
   - **Search**: Instantly find products by name.
@@ -25,12 +32,14 @@ This project is packed with features that make for a complete and satisfying use
 - **Real-Time Updates**: The product grid updates in real-time as filters are applied.
 
 ### Shopping Cart
+
 - **Persistent Cart**: The shopping cart is saved in `LocalStorage`, so it persists even when the browser is refreshed or closed.
 - **Add, Remove, and Update**: Users can easily add products to the cart, remove them, or update the quantity.
 - **Automatic Calculation**: The cart total is automatically calculated as items are added, removed, or updated.
 - **Clear Cart**: A "Clear Cart" button allows users to empty their cart with a single click.
 
 ### Ordering
+
 - **Seamless Checkout Flow**: A "Proceed to Order" button in the cart takes the user to a summary page.
 - **Order Summary**: The order page displays a complete breakdown of the items, subtotal, tax (5%), and the final total.
 - **Order Confirmation**: Upon confirming the order, the cart is cleared, and a confirmation toast message is displayed.
@@ -113,5 +122,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 - **Year**: 2025
 
 ---
+
 > "Code with clarity, design with empathy."
+
 ---
