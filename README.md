@@ -1,5 +1,9 @@
 # 🛒 Hami MiniMarket: A Responsive E-Commerce Website
 
+<p align="center">
+  <img src="assets/preview.png" alt="Hami MiniMarket Preview" width="100%">
+</p>
+
 Hami MiniMarket is a modern, fully responsive e-commerce website built for a local grocery store. This project, developed as part of the HamiSkills Web Development Internship, demonstrates a complete front-end implementation of a mini-market, from a welcoming landing page to a functional order confirmation. It is designed to be user-friendly, intuitive, and visually appealing, providing a seamless shopping experience on any device.
 
 ## 🚀 Live Demo
