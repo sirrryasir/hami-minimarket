@@ -676,3 +676,18 @@ textarea {
     justify-content: flex-start;
   }
 }
+
+.cart-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.proceed-btn {
+  background: var(--secondary-color);
+  color: var(--text-dark);
+}
+
+.proceed-btn:hover {
+  background: var(--secondary-hover);
+}

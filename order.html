@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Summary - Hami MiniMarket</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/order.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <img src="./assets/logo.png" alt="Logo" />
+        <strong>Hami MiniMarket</strong>
+      </a>
+
+      <h1>Order Summary</h1>
+
+      <a href="products.html" class="btn back-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Continue</span>
+      </a>
+    </header>
+
+    <main class="order-container">
+      <section id="orderItems"></section>
+
+      <div class="summary">
+        <h3>Order Details</h3>
+        <p><strong>Subtotal:</strong> $<span id="subtotal">0.00</span></p>
+        <p><strong>Tax (5%):</strong> $<span id="tax">0.00</span></p>
+        <p><strong>Total:</strong> $<span id="total">0.00</span></p>
+        <button id="confirmOrder" class="btn confirm-btn">Confirm Order</button>
+      </div>
+    </main>
+
+    <div id="toast" class="toast"></div>
+
+    <script type="module" src="./js/order.js"></script>
+  </body>
+</html>
