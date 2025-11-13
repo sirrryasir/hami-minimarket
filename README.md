@@ -5,7 +5,7 @@ Hami MiniMarket is a modern, fully responsive e-commerce website built for a loc
 ## Project Preview
 
 <p align="center">
-  <img src="assets/preview.png" alt="Hami MiniMarket Preview" width="100%">
+  <img src="frontend/assets/preview.png" alt="Hami MiniMarket Preview" width="100%">
 </p>
 
 ## 🚀 Live Demo
