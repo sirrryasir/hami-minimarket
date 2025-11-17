@@ -8,6 +8,7 @@ const search = document.getElementById("searchInput");
 const cat = document.getElementById("categoryFilter");
 const price = document.getElementById("priceRange");
 const priceLabel = document.getElementById("priceValue");
+const loading = document.getElementById("loading");
 
 let products = [];
 
