@@ -4,6 +4,10 @@ A compact full‑stack mini e-commerce application (frontend + backend). Users c
 
 --
 
+## Project Preview
+
+ <p align="center"> <img src="frontend/assets/preview.png" alt="Hami MiniMarket Preview" width="100%"> </p>
+
 ## Table of contents
 
 - [About](#about)
@@ -56,6 +60,8 @@ Built during the HamiSkills Web Development Internship (Week 1-4). The project d
 
 ```
 hami-minimarket/
+├── .gitignore
+├── README.md
 ├── backend/
 │   ├── config/
 │   │   └── db.js
@@ -67,19 +73,30 @@ hami-minimarket/
 │   ├── models/
 │   │   ├── Order.js
 │   │   └── Product.js
+│   ├── package-lock.json
+│   ├── package.json
 │   ├── routes/
 │   │   ├── orderRoutes.js
 │   │   └── productRoutes.js
-│   ├── server.js
-│   └── package.json
+│   └── server.js
 ├── frontend/
-│   ├── index.html
-│   ├── products.html
-│   ├── order.html
 │   ├── assets/
+│   │   ├── favicon.ico
+│   │   ├── logo.png
+│   │   └── preview.png
 │   ├── css/
-│   └── js/
-├── README.md
+│   │   ├── order.css
+│   │   └── style.css
+│   ├── index.html
+│   ├── js/
+│   │   ├── cart.js
+│   │   ├── config.js
+│   │   ├── order.js
+│   │   ├── products.js
+│   │   ├── script.js
+│   │   └── storage.js
+│   ├── order.html
+│   └── products.html
 └── package.json
 ```
 
