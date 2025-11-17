@@ -12,7 +12,7 @@ Hami MiniMarket is a modern, fully responsive e-commerce website built for a loc
 
 Experience the live version of the application here:
 
-[**(Live Demo)**](https://sirrryasir.github.io/hami-minimarket/)
+[**(Live Demo)**](https://https://hamimm.vercel.app/)
 
 ## ✨ Features
 

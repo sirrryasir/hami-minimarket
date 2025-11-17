@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products - Hami MiniMarket</title>
+    <meta
+      name="description"
+      content="Fresh fruits and vegetables delivered from local farms."
+    />
+    <meta
+      name="keywords"
+      content="fruits, vegetables, market, groceries, hargeisa"
+    />
+
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/style.css" />
     <link
@@ -72,208 +81,10 @@
         <span id="priceValue">$10</span>
       </div>
 
+      <div id="loading" class="loading">Loading products...</div>
+
       <!-- Product List -->
-      <div class="product-grid" id="productList">
-        <div class="card" data-category="fruits">
-          <img
-            src="https://thumbs.dreamstime.com/b/red-apple-fruit-half-green-leaf-isolated-white-ripe-background-apples-clipping-path-98166062.jpg"
-            alt="Apple"
-          />
-          <h3>Red Apple</h3>
-          <p>$2.99 / kg</p>
-          <button class="add-cart-btn">Add to Cart</button>
-        </div>
-
-        <div class="card" data-category="fruits">
-          <img
-            src="https://oasisonline.com.au/cdn/shop/products/bananas_1000x.jpg?v=1613482485"
-            alt="Bananas"
-          />
-          <h3>Bananas</h3>
-          <p>$1.49 / kg</p>
-          <button class="add-cart-btn">Add to Cart</button>
-        </div>
-
-        <div class="card" data-category="vegetables">
-          <img
-            src="https://www.distributors-marketplace.com/images/prod/16/Tomatoes%20Vine%20Ripe.jpg"
-            alt="Tomato"
-          />
-          <h3>Ripe Tomatoes</h3>
-          <p>$2.19 / kg</p>
-          <button class="add-cart-btn">Add to Cart</button>
-        </div>
-
-        <div class="card" data-category="vegetables">
-          <img
-            src="https://t4.ftcdn.net/jpg/02/06/86/67/360_F_206866740_8k84uz3nnixk6iPI5osM3qNdPDuAcNfa.jpg"
-            alt="Carrots"
-          />
-          <h3>Carrots</h3>
-          <p>$1.75 / kg</p>
-          <button class="add-cart-btn">Add to Cart</button>
-        </div>
-
-        <div class="card" data-category="vegetables">
-          <img
-            src="https://dm.cms.aldi.cx/is/image/prod1amer/product/jpg/scaleWidth/500/d43e147c-d695-47f0-a068-a334f52f7842/Lemons%202%20lb"
-            alt="Broccoli"
-          />
-          <h3>Broccoli</h3>
-          <p>$3.50 / kg</p>
-          <button class="add-cart-btn">Add to Cart</button>
-        </div>
-
-        <div class="card" data-category="vegetables">
-          <img
-            src="https://i5.walmartimages.com/asr/df54c034-a747-4f00-81ce-47191ab4972c.9efd669f6daffd19ffaf32e270ef7598.jpeg"
-            alt="Onions"
-          />
-          <h3>Red Onions</h3>
-          <p>$1.20 / kg</p>
-          <button class="add-cart-btn">Add to Cart</button>
-        </div>
-
-        <div class="card" data-category="vegetables">
-          <img
-            src="https://cdn.qvm.com.au/wp-content/uploads/2022/10/the-apple-corner-Sweet-potatoes.jpg"
-            alt="Sweet Potatoes"
-          />
-          <h3>Sweet Potatoes</h3>
-          <p>$2.49 / kg</p>
-          <button class="add-cart-btn">Add to Cart</button>
-        </div>
-
-        <div class="card" data-category="fruits">
-          <img
-            src="https://img.imageboss.me/fourwinds/width/425/dpr:2/shop/products/shutterstock_100322618hass_avocado.jpg?v=1729718212"
-            alt="Avocados"
-          />
-          <h3>Hass Avocados</h3>
-          <p>$4.99 / piece</p>
-          <button class="add-cart-btn">Add to Cart</button>
-        </div>
-
-        <div class="card" data-category="fruits">
-          <img
-            src="https://media.istockphoto.com/id/182463420/photo/tangerine-duo-with-leafs.jpg?s=612x612&w=0&k=20&c=d3JZRAqgqZ5RWyN4ryFteCnmFNbeD9e3TNJkS2IC0vU="
-            alt="Oranges"
-          />
-          <h3>Oranges</h3>
-          <p>$1.95 / kg</p>
-          <button class="add-cart-btn">Add to Cart</button>
-        </div>
-
-        <div class="card" data-category="fruits">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlrRvORkF215XDCV0OdsIqBnt0ZZFX1rtutyhrEfowHklnr4jLTmPovvrQt274rEuOVs4&usqp=CAU"
-            alt="Grapes"
-          />
-          <h3>Green Grapes</h3>
-          <p>$5.50 / kg</p>
-          <button class="add-cart-btn">Add to Cart</button>
-        </div>
-
-        <div class="card" data-category="vegetables">
-          <img
-            src="https://fruitique.in/cdn/shop/products/english_cucumber_1500_x_1500_750x810.jpg?v=1632308819"
-            alt="Cucumbers"
-          />
-          <h3>Cucumbers</h3>
-          <p>$1.30 / kg</p>
-          <button class="add-cart-btn">Add to Cart</button>
-        </div>
-
-        <div class="card" data-category="vegetables">
-          <img
-            src="https://cdn.shopify.com/s/files/1/0824/4857/files/spinach_large.jpg?v=1490961229"
-            alt="Spinach"
-          />
-          <h3>Organic Spinach</h3>
-          <p>$2.65 / kg</p>
-          <button class="add-cart-btn">Add to Cart</button>
-        </div>
-
-        <div class="card" data-category="vegetables">
-          <img
-            src="https://cdn.prod.website-files.com/6813327ff6a5c6e7b27cf7c8/68a352302e449ba550f5d754_6852bd0ad3f48b321064b105_Pepper_Red_Bell.jpeg"
-            alt="Red Bell Peppers"
-          />
-          <h3>Red Bell Peppers</h3>
-          <p>$3.10 / kg</p>
-          <button class="add-cart-btn">Add to Cart</button>
-        </div>
-
-        <div class="card" data-category="fruits">
-          <img
-            src="https://panettamercato.com.au/wp-content/uploads/2021/07/Lemons-1kg-Net-Panetta-Mercato.jpeg"
-            alt="Lemons"
-          />
-          <h3>Lemons</h3>
-          <p>$1.79 / kg</p>
-          <button class="add-cart-btn">Add to Cart</button>
-        </div>
-
-        <div class="card" data-category="vegetables">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Chou-fleur_02.jpg"
-            alt="Cauliflower"
-          />
-          <h3>Cauliflowers</h3>
-          <p>$3.25 / kg</p>
-          <button class="add-cart-btn">Add to Cart</button>
-        </div>
-
-        <div class="card" data-category="vegetables">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN_uhM0eWP8vpC5ZYQWJtX7OWWji_2u0-g2Q&s"
-            alt="Garlic"
-          />
-          <h3>Garlics</h3>
-          <p>$0.75 / piece</p>
-          <button class="add-cart-btn">Add to Cart</button>
-        </div>
-
-        <div class="card" data-category="fruits">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuDiroxCRX6tJukmr-IISJ_DQkq7qh10oJ7qfhG3qbdBQzRRm9LUorI71qjeWt_Tf3hKc&usqp=CAU"
-            alt="Kiwi Fruit"
-          />
-          <h3>Kiwi Fruits</h3>
-          <p>$3.29 / kg</p>
-          <button class="add-cart-btn">Add to Cart</button>
-        </div>
-
-        <div class="card" data-category="fruits">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRcsYc-6vshS5qQX_XMNwMSm-7TAErvuDrCfMRhJ7W5Hcuv7rCkeKJwTXLjYRT5Xh23ps&usqp=CAU"
-            alt="Mangoes"
-          />
-          <h3>Mangoes</h3>
-          <p>$1.80 / piece</p>
-          <button class="add-cart-btn">Add to Cart</button>
-        </div>
-
-        <div class="card" data-category="vegetables">
-          <img
-            src="https://malabardirect.com/cdn/shop/products/pinkravaya.jpg?v=1601574508"
-            alt="Eggplants (Aubergine)"
-          />
-          <h3>Eggplants Aubergine</h3>
-          <p>$2.10 / kg</p>
-          <button class="add-cart-btn">Add to Cart</button>
-        </div>
-
-        <div class="card" data-category="fruits">
-          <img
-            src="https://img.freepik.com/free-photo/green-striped-ripe-watermelon-with-slice-cross-section-isolated-white-background-with-copy-space-text-images-special-kind-berry-sweet-pink-flesh-with-black-seeds-side-view_639032-1254.jpg"
-            alt="Watermelon"
-          />
-          <h3>Watermelons</h3>
-          <p>$0.99 / kg</p>
-          <button class="add-cart-btn">Add to Cart</button>
-        </div>
-      </div>
+      <div class="product-grid" id="productList"></div>
     </section>
 
     <!-- Cart Sidebar -->

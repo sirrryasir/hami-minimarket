@@ -1,0 +1,21 @@
+{
+  "name": "hami-minimarket",
+  "version": "1.0.0",
+  "description": "Hami MiniMarket is a modern, fully responsive e-commerce website built for a local grocery store. This project, developed as part of the HamiSkills Web Development Internship, demonstrates a complete front-end implementation of a mini-market, from a welcoming landing page to a functional order confirmation. It is designed to be user-friendly, intuitive, and visually appealing, providing a seamless shopping experience on any device.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sirrryasir/hami-minimarket.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sirrryasir/hami-minimarket/issues"
+  },
+  "homepage": "https://github.com/sirrryasir/hami-minimarket#readme"
+}

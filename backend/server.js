@@ -1,9 +1,10 @@
 import express from "express";
 import cors from "cors";
 import connectDB from "./config/db.js";
-import { env } from "./lib/env.js";
+import env from "./lib/env.js";
 import productRoutes from "./routes/productRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
+import mongoose from "mongoose";
 
 const app = express();
 
@@ -21,8 +22,12 @@ app.get("/", (req, res) => {
 });
 
 // Connect to DB & Start Server
-connectDB();
+const startServer = async () => {
+  mongoose.set("strictQuery", true);
+  await connectDB();
+  app.listen(env.PORT, () => {
+    console.log(`Server is running on port http://localhost:${env.PORT}`);
+  });
+};
 
-app.listen(env.PORT, () =>
-  console.log(`Server running on http://localhost:${env.PORT}`)
-);
+startServer();

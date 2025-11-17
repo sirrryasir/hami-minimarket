@@ -2,12 +2,13 @@ import { loadCart, saveCart } from "./storage.js";
 
 export let cart = loadCart();
 
+window.addEventListener("DOMContentLoaded", updateCartUI);
+
 export function updateCartUI() {
   const cartItemsContainer = document.getElementById("cartItems");
   const cartTotal = document.getElementById("cartTotal");
   const cartCount = document.getElementById("cartCount");
 
-  // Haddii cartItems aan la helin, update count oo kaliya
   if (!cartItemsContainer) {
     let count = 0;
     cart.forEach((item) => (count += item.qty));
@@ -78,12 +79,20 @@ function attachListeners() {
   );
 
   // Clear cart
+  const toast = document.getElementById("toast");
   const clearBtn = document.getElementById("clearCart");
   if (clearBtn) {
     clearBtn.onclick = () => {
       cart = [];
+      showToast("Cart cleared successfully!");
       updateCartUI();
     };
+  }
+
+  function showToast(msg) {
+    toast.textContent = msg;
+    toast.classList.add("show");
+    setTimeout(() => toast.classList.remove("show"), 2500);
   }
 
   // Proceed to order

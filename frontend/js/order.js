@@ -1,6 +1,7 @@
 import { loadCart, saveCart } from "./storage.js";
+import { apiPost } from "./config.js";
 
-const orderItems = document.getElementById("orderItems");
+const itemsEl = document.getElementById("orderItems");
 const subtotalEl = document.getElementById("subtotal");
 const taxEl = document.getElementById("tax");
 const totalEl = document.getElementById("total");
@@ -10,46 +11,46 @@ const toast = document.getElementById("toast");
 let cart = loadCart();
 
 function renderOrder() {
-  orderItems.innerHTML = "";
+  itemsEl.innerHTML = "";
   let subtotal = 0;
 
-  if (cart.length === 0) {
-    orderItems.innerHTML = "<p>Your cart is empty.</p>";
-    subtotalEl.textContent = "0.00";
-    taxEl.textContent = "0.00";
-    totalEl.textContent = "0.00";
-    return;
-  }
-
   cart.forEach((item) => {
-    const div = document.createElement("div");
-    div.classList.add("order-item");
-    div.innerHTML = `
-      <img src="${item.img}" alt="${item.name}">
-      <div>
+    subtotal += item.price * item.qty;
+    itemsEl.innerHTML += `
+      <div class="order-item">
+        <img src="${item.img}">
         <h4>${item.name}</h4>
-        <p>${item.qty} × $${item.price.toFixed(2)}</p>
+        <p>${item.qty} x $${item.price}</p>
+        <strong>$${(item.qty * item.price).toFixed(2)}</strong>
       </div>
-      <strong>$${(item.qty * item.price).toFixed(2)}</strong>
     `;
-    orderItems.appendChild(div);
-    subtotal += item.qty * item.price;
   });
 
   const tax = subtotal * 0.05;
-  const total = subtotal + tax;
+  const totalPrice = subtotal + tax;
 
   subtotalEl.textContent = subtotal.toFixed(2);
   taxEl.textContent = tax.toFixed(2);
-  totalEl.textContent = total.toFixed(2);
+  totalEl.textContent = totalPrice.toFixed(2);
 }
 
-confirmBtn.addEventListener("click", () => {
-  if (cart.length === 0) return;
-  showToast("✅ Order confirmed successfully!");
-  cart = [];
-  saveCart(cart);
-  renderOrder();
+confirmBtn.addEventListener("click", async () => {
+  if (!cart.length) return showToast("Cart is empty.");
+
+  try {
+    await apiPost("/api/orders", {
+      items: cart,
+      totalAmount: Number(totalEl.textContent),
+    });
+
+    showToast("Order saved successfully!");
+    cart = [];
+    saveCart(cart);
+    renderOrder();
+  } catch (err) {
+    showToast("Failed to save order.");
+    return;
+  }
 });
 
 function showToast(msg) {
